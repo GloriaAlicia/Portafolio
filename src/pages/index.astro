@@ -1,0 +1,38 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Landing from '../components/Landing.astro';
+import About from '../components/About.astro';
+---
+
+<Layout title="Welcome portfolio">
+  <main class="text-zinc-900">
+    <section
+      class="flex flex-col justify-center items-center w-full h-screen mesh-gradient overflow-hidden"
+    >
+      <Landing />
+    </section>
+    <About />
+  </main>
+</Layout>
+
+<style is:global>
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+
+  @layer base {
+    :root {
+      --blues: 9 186 213;
+      --lime-green: 37 237 145;
+      --mindaro: 224 248 138;
+      --teal: 0 128 128;
+      --cream: 250 2521;
+    }
+  }
+
+  @font-face {
+    font-family: 'CascadiaCode';
+    src: url('/fonts/CascadiaCode.woff');
+    font-display: swap;
+  }
+</style>
