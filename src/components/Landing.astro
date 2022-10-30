@@ -1,41 +1,42 @@
 ---
-const fontSize = 'text-4xl';
-const signal = 'whitespace-nowrap bg-white absolute text-sm px-1';
+import Menu from './Menu.astro';
+
+const fontSize = 'text-5xl sm:text-7xl';
 ---
 
-<section class="w-11/12 max-w-lg relative">
-  <code class="flex flex-col justify-center items-center">
-    <span class={`font-title ${fontSize} select-none flex flex-start w-full`}>
-      (Gloria)=&#62;&#123;</span
-    >
+<section
+  class="flex justify-center items-center w-full overflow-hidden md:w-11/12 h-screen flex-col md:flex-row"
+>
+  <Menu />
 
-    <div class="text-base font-text ml-3">
-      <p><span class="text-pink-100 font-medium">return</span> `</p>
-      <p class="text-xl mb-2">Frontend Developer</p>
-      <p class="text-zinc-700">
-        Adoro ser perfeccionista, enfocandome en el diseño intuitivo y
-        performance eficaz para el usuario.`
-      </p>
+  <article
+    class="h-4/5 mesh-gradient md:border md:border-zinc-900 md:p-4 rounded-md w-full flex flex-col justify-center items-center max-sm:h-full"
+  >
+    <div
+      class="w-11/12 max-w-lg relative before:h-96 before:w-96 before:rounded-full before:rotate-12 before:absolute before:-bottom-10 before:-left-4 before:mesh-gradient before:mix-blend-lighten before:sm:flex before:hidden flex flex-col justify-center items-center"
+    >
+      <article class="flex flex-col justify-center items-center h-full">
+        <span class={`font-title ${fontSize} select-none w-full text-zinc-800`}>
+          Gloria Alicia</span
+        >
+
+        <div>
+          <h2 class="font-text text-xl mb-2">Frontend Developer</h2>
+          <p class="text-zinc-700 sm:absolute font-text text-base">
+            Adoro ser perfeccionista, enfocandome en el diseño intuitivo y
+            performance eficaz para el usuario.
+          </p>
+        </div>
+      </article>
     </div>
 
-    <span class="font-title text-3xl flex flex-end w-full select-none">
-      &#125;</span
+    <div
+      class="absolute bottom-7 bg-white flex justify-between rounded-full p-1 items-center border border-zinc-800 overflow-hidden font-text"
     >
-  </code>
+      <h2 class="text-xl mx-2">Descargar CV</h2>
+      <a href="#" class="p-2 bg-mindaro rounded-full">
+        <img src="assets/world.svg" alt="cursor abstract shape" width="70" />
+      </a>
+    </div>
+  </article>
 </section>
-
-<div
-  class="absolute bottom-7 bg-white flex justify-between rounded-full p-1 items-center border border-zinc-800 overflow-hidden"
->
-  <h2 class="font-title text-xl mr-2">&#60;/Proyectos&#62;</h2>
-  <a href="#" class="p-2 bg-lime rounded-full">
-    Ver todos
-    <img
-      src="assets/world.svg"
-      alt="cursor abstract shape"
-      width="100"
-      class="absolute left-20 rotate-6 z-10"
-    />
-  </a>
-</div>
-<!-- &#60;/Proyectos&#62; -->

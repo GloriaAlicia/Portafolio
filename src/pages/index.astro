@@ -2,16 +2,19 @@
 import Layout from '../layouts/Layout.astro';
 import Landing from '../components/Landing.astro';
 import About from '../components/About.astro';
+import Proyects from '../components/Proyects.astro';
+import Form from '../components/Form.astro';
 ---
 
 <Layout title="Welcome portfolio">
-  <main class="text-zinc-900">
-    <section
-      class="flex flex-col justify-center items-center w-full h-screen mesh-gradient overflow-hidden"
-    >
-      <Landing />
-    </section>
+  <main
+    class="flex flex-col justify-center items-center text-zinc-900 font-text text-base"
+  >
+    <Landing />
+
     <About />
+    <Proyects />
+    <Form />
   </main>
 </Layout>
 
@@ -26,13 +29,18 @@ import About from '../components/About.astro';
       --lime-green: 37 237 145;
       --mindaro: 224 248 138;
       --teal: 0 128 128;
-      --cream: 250 2521;
     }
   }
 
   @font-face {
     font-family: 'CascadiaCode';
     src: url('/fonts/CascadiaCode.woff');
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'yipes';
+    src: url('/fonts/yipes.woff');
     font-display: swap;
   }
 </style>

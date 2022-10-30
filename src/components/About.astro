@@ -1,8 +1,22 @@
-<section>
-  <h3>Sobre mí</h3>
-  <p>
-    Lorem ipsum dolor sit amet consectetur, adipisicing elit. At quos, enim
-    atque soluta accusamus repudiandae fuga iure nisi velit autem culpa cum ab
-    sit itaque recusandae ducimus delectus laborum qui?
+---
+const listItem = 'rounded-md border border-zinc-900 px-1';
+---
+
+<section class="px-4">
+  <h2 class="font-title text-4xl sm:text-6xl">Sobre mí</h2>
+  <p class="text-zinc-700">
+    Hola, soy una egresada de ONE (Oracle Next Education), actualmente en
+    búsqueda de nuevos conocimientos y actualizaciones, me interesa formar parte
+    de un equipo para colaborar y apoyar constantemente en la realización de
+    proyectos que ayuden a otros a crecer.
   </p>
+
+  <h3 class="text-xl mb-2">Habilidades blandas</h3>
+
+  <ul class="flex flex-wrap gap-1">
+    <li class={`${listItem}`}>Trabajo en equipo</li>
+    <li class={`${listItem}`}>Creatividad</li>
+    <li class={`${listItem}`}>Comunicacion</li>
+    <li class={`${listItem}`}>Rol de equipo</li>
+  </ul>
 </section>
