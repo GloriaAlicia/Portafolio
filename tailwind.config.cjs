@@ -14,13 +14,16 @@ module.exports = {
         nara: 'rgb(var(--nara) / <alpha-value>)',
       },
       fontFamily: {
-        title: ['yipes', 'CascadiaCode', 'sans-serif'],
+        title: ['yipes', 'Helvetica', 'sans-serif', 'arial'],
         text: ['Almarai', 'sans-serif'],
       },
     },
     backgroundImage: {
       grid: "url('/assets/lines.svg')",
       ONE: "url('/assets/oracle-one-logo.svg')",
+    },
+    gridTemplateColumns: {
+      auto: 'repeat(auto-fill, minmax(96px, 1fr))',
     },
   },
   plugins: [

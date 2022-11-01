@@ -1,9 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Landing from '../components/Landing.astro';
-import About from '../components/About.astro';
-import Proyects from '../components/Proyects.astro';
-import Form from '../components/Form.astro';
+import Landing from '../layouts/Landing.astro';
+import About from '../layouts/About.astro';
+import Proyects from '../layouts/Proyects.astro';
+import Form from '../layouts/Form.astro';
 ---
 
 <Layout title="Welcome portfolio">
@@ -31,12 +31,6 @@ import Form from '../components/Form.astro';
       --nara: 254 231 255; /** #FEE7E1 */
       --astronaut: 38 48 103; /** #263167 */
     }
-  }
-
-  @font-face {
-    font-family: 'CascadiaCode';
-    src: url('/fonts/CascadiaCode.woff');
-    font-display: swap;
   }
 
   @font-face {
