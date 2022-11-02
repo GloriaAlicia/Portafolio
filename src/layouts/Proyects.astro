@@ -1,80 +1,101 @@
 ---
 import Icon from '../components/Icon.astro';
+import Proyect from '../components/Proyect.astro';
 import SectionComponent from '../components/SectionComponent.astro';
+import Subtitle from '../components/Subtitle.astro';
+import Tag from '../components/Tag.astro';
+
+const textTasker =
+  'Proyecto independiente para conocer los principales hooks de react, tales como useState, useContext, useReducer, useEffect, así como conocer el guardado de datos en localStorage utilizando la libreria, con el desafio extra de crear listas con tareas independiente y mostrar su progreso.';
+
+const textHangman =
+  'Challenge del programa ONE, en el que a partir de las bases se desarrolla el juego, guardando palabras en localStorage, validando la entrada de las nuevas palabras, mostrando el desarrollo del muñeco según la cantidad de vidas, entre otros pequeños desafíos en el trayecto.';
 ---
 
 <SectionComponent>
-  <div class="w-full lg:flex flex-col">
+  <div class="w-full lg:flex lg:w-11/12 flex-col">
     <h2 class="font-title text-3xl sm:text-6xl select-none">Proyectos</h2>
-    <div>
-      <h3 class="font-text text-xl mb-2">Frameworks y librerias utilizadas</h3>
+    <div class="flex lg:flex-row lg:justify-between flex-col gap-1">
+      <div class="lg:w-full md:bg-lime/[.1] p-1 rounded-md">
+        <Subtitle text="Frameworks y librerias utilizadas" />
 
-      <ul class="grid grid-cols-auto gap-1.5">
-        <Icon text="HTML5" path="icons/html5.svg" alt="html html5 icon logo" />
-        <Icon text="CSS" path="icons/css3.svg" alt="css css3 icon logo" />
-        <Icon
-          text="JS"
-          path="icons/javascript.svg"
-          alt="js javascript icon logo"
-        />
-        <Icon text="GIT" path="icons/git.svg" alt="git icon logo" />
-        <Icon
-          text="styled"
-          path="icons/styled-components.svg"
-          alt="styled components icon logo"
-        />
-        <Icon
-          text="Tailwind"
-          path="icons/tailwindcss.svg"
-          alt="tailwind icon logo"
-        />
-        <Icon
-          text="React"
-          path="icons/react.svg"
-          alt="react library icon logo"
-        />
-      </ul>
-    </div>
+        <ul class="grid grid-cols-auto gap-1.5">
+          <Icon
+            text="HTML5"
+            path="icons/html5.svg"
+            alt="html html5 icon logo"
+          />
+          <Icon text="CSS" path="icons/css3.svg" alt="css css3 icon logo" />
+          <Icon
+            text="JS"
+            path="icons/javascript.svg"
+            alt="js javascript icon logo"
+          />
+          <Icon text="GIT" path="icons/git.svg" alt="git icon logo" />
+          <Icon
+            text="styled"
+            path="icons/styled-components.svg"
+            alt="styled components icon logo"
+          />
+          <Icon
+            text="Tailwind"
+            path="icons/tailwindcss.svg"
+            alt="tailwind icon logo"
+          />
+          <Icon
+            text="React"
+            path="icons/react.svg"
+            alt="react library icon logo"
+          />
+        </ul>
+      </div>
 
-    <div>
-      <h3 class="font-text text-xl mb-2">Aprendiendo actualmente</h3>
-      <ul class="grid grid-cols-auto gap-1.5">
-        <Icon text="MySQL" path="icons/mysql.svg" alt="mySQL SQL icon logo" />
-        <Icon
-          text="TS"
-          path="icons/typescript.svg"
-          alt="typescript icon logo"
-        />
-      </ul>
+      <div class="lg:w-2/4 mb-3">
+        <h3 class="font-text text-xl mb-2 lg:text-end">
+          Aprendiendo actualmente
+        </h3>
+        <ul class="grid grid-cols-auto gap-1.5">
+          <li class="max-lg:hidden"></li>
+          <Icon text="MySQL" path="icons/mysql.svg" alt="mySQL SQL icon logo" />
+          <Icon
+            text="TS"
+            path="icons/typescript.svg"
+            alt="typescript icon logo"
+          />
+        </ul>
+      </div>
     </div>
   </div>
 
-  <div class="w-full">
-    <article>
-      <h3 class="font-text text-xl mb-2">Tasker / Notas</h3>
-      <img src="img/tasker.png" alt="imagen to-do list tasker" />
-      <p>
-        Proyecto independiente para conocer los principales hooks de react,
-        tales como useState, useContext, useReducer, useEffect, así como conocer
-        el guardado de datos en localStorage utilizando la libreria, con el
-        desafio extra de crear listas con tareas independiente y mostrar su
-        progreso.
-      </p>
-    </article>
-    <article>
-      <h3 class="font-text text-xl mb-2">El ahorcado</h3>
-      <img src="img/hangman.png" alt="imagen ahorcado" />
-      <p>
-        Challenge del programa ONE, en el que a partir de las bases se
-        desarrolla el juego, guardando palabras en localStorage, validando la
-        entrada de las nuevas palabras, mostrando el desarrollo del muñeco según
-        la cantidad de vidas, entre otros pequeños desafíos en el trayecto.
-      </p>
-    </article>
+  <div class="lg:w-11/12 w-full my-4">
+    <Proyect
+      name="Tasker"
+      path="img/tasker.png"
+      alt="imagen to-do list tasker"
+      text={`${textTasker}`}
+    >
+      <div class="flex gap-1 mt-1">
+        <Tag text="React" />
+        <Tag text="Styled Components" />
+      </div>
+    </Proyect>
+
+    <Proyect
+      name="El ahorcado"
+      path="img/hangman.png"
+      alt="imagen ahorcado"
+      text={`${textHangman}`}
+    >
+      <div class="flex gap-1 mt-1">
+        <Tag text="HTML5" />
+        <Tag text="CSS3" />
+        <Tag text="JavaScript" />
+      </div>
+    </Proyect>
   </div>
 
-  <div class="w-full">
-    <h3>Para este proyecto</h3>
+  <div class="w-full lg:w-11/12">
+    <Subtitle text="Para este protecto" />
     <ul class="grid grid-cols-auto gap-1.5">
       <Icon text="Astro" path="icons/astro.svg" alt="astro icon logo" />
       <Icon
