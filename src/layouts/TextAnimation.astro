@@ -1,0 +1,39 @@
+<div class="w-full flex items-center justify-center flex-col md:my-10">
+  <svg
+    class="mix-blend-screen"
+    data-filter-type="distortion"
+    preserveAspectRatio="xMidYMid meet"
+    viewBox="0 0 1000 200"
+  >
+    <path
+      id="text-curve2"
+      d="M 0 50 Q 100 0 200 100 Q 300 200 650 50 C 750 0 750 150 1000 50"
+      fill="none"></path>
+    <text>
+      <textPath
+        href="#text-curve2"
+        font-size="50"
+        id="textPath"
+        startOffset="0"
+        class="fill-astronaut"
+      >
+        Gloria Alicia García García - Gloria Alicia García García
+      </textPath>
+    </text>
+  </svg>
+</div>
+
+<script>
+  const updateTextPathOffset = (offset: number) => {
+    const textPath: HTMLElement | null = document.querySelector('#textPath')!;
+    textPath.setAttribute('startOffset', offset.toString());
+  };
+
+  const onScroll = () => {
+    requestAnimationFrame(() => {
+      updateTextPathOffset(window.scrollY * 0.5);
+    });
+  };
+
+  window.addEventListener('scroll', onScroll);
+</script>

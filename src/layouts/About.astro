@@ -1,13 +1,14 @@
 ---
+import Icon from '../components/Icon.astro';
 import Link from '../components/Link.astro';
 import SectionComponent from '../components/SectionComponent.astro';
 
-const listItem = 'rounded-full border border-astronaut px-2 py-1 ';
-const containerFlex = 'flex items-center gap-2';
+const listItem = 'rounded-full px-2 py-1 ';
+const containerFlex = 'flex items-center gap-3';
 ---
 
 <SectionComponent>
-  <div class="lg:flex-row flex flex-col justify-around sm:m-0 my-14">
+  <div class="lg:flex-row flex flex-col justify-around sm:m-0 my-14 relative">
     <div class="lg:w-2/4">
       <h2 class="font-title text-4xl sm:text-6xl select-none mb-2">Sobre mí</h2>
       <p>
@@ -21,10 +22,10 @@ const containerFlex = 'flex items-center gap-2';
       <h3 class="text-xl mb-2 mt-3">Habilidades blandas</h3>
 
       <ul class="flex flex-wrap gap-1">
-        <li class={`${listItem}`}>Trabajo en equipo</li>
-        <li class={`${listItem}`}>Creatividad</li>
-        <li class={`${listItem}`}>Comunicacion</li>
-        <li class={`${listItem}`}>Rol de equipo</li>
+        <li class={`${listItem} bg-blues/50`}>Creatividad</li>
+        <li class={`${listItem} bg-blues/40`}>Comunicacion</li>
+        <li class={`${listItem} bg-blues/30`}>Rol de equipo</li>
+        <li class={`${listItem} bg-blues/20`}>Resilencia</li>
       </ul>
 
       <article
@@ -59,36 +60,16 @@ const containerFlex = 'flex items-center gap-2';
       </article>
     </div>
 
-    <ul
-      class="flex lg:flex-col sm:bg-transparent sm:mb-0 flex-row p-1 lg:w-1/3 w-full h-auto gap-1 bg-lime/20 rounded-full mt-1"
-    >
-      <li
-        class="rounded-full md:border-2 md:border-lime bottom-2 right-2 p-3 justify-center items-center sm:flex hidden"
-      >
-        <p class="md:text-2xl sm:text-xl text-center">Encuentrame en redes</p>
-        <img src="assets/arrow.svg" alt="flecha link" class="w-2/5" />
-      </li>
-      <ul
-        class="border border-lime bg-grid bg-opacity-60 rounded-full p-3 flex flex-wrap gap-1 flex-col w-full"
-      >
-        <li class="flex p-1 justify-center items-center">
-          <span class="font-bold">correo:</span>
-          <p>ga365743@gmail.com</p>
-        </li>
-
-        <ul class="flex gap-1 flex-wrap justify-center items-center">
-          <Link
-            link="https://www.linkedin.com/in/gloria-alicia-garcía"
-            text="Linkedin"
-            styles="text-mindaro bg-blues rounded-md px-2 p-1 w-fit"
-          />
-          <Link
-            link="https://github.com/GloriaAlicia"
-            text="Github"
-            styles=" text-mindaro bg-blues rounded-md  px-2 py-1 w-fit"
-          />
-        </ul>
+    <div class="lg:w-1/3 w-full">
+      <h3 class="font-text text-xl mb-2">Aprendiendo actualmente</h3>
+      <ul class="grid grid-cols-auto gap-1.5">
+        <Icon text="MySQL" path="icons/mysql.svg" alt="mySQL SQL icon logo" />
+        <Icon
+          text="TS"
+          path="icons/typescript.svg"
+          alt="typescript icon logo"
+        />
       </ul>
-    </ul>
+    </div>
   </div>
 </SectionComponent>

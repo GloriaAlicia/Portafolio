@@ -14,7 +14,7 @@ module.exports = {
         nara: 'rgb(var(--nara) / <alpha-value>)',
       },
       fontFamily: {
-        title: ['yipes', 'Helvetica', 'sans-serif', 'arial'],
+        title: ['"Albert Sans"', 'yipes', 'Helvetica', 'sans-serif', 'arial'],
         text: ['Almarai', 'sans-serif'],
       },
     },
@@ -29,17 +29,24 @@ module.exports = {
   plugins: [
     plugin(function ({ addUtilities, addComponents, e, config }) {
       addUtilities({
+        '.text-gradient': {
+          'background-image': `
+            radial-gradient( at 0% 50%, #263167 0%, rgba(0, 0, 0, 0) 80%),
+            radial-gradient( at 50% 0%, #19A598 0%, transparent);`,
+        },
         '.bg-radial-gradient': {
           'background-image': `
-            radial-gradient(farthest-side at 4% 4%, #4376EC 0%, rgba(0, 0, 0, 0) 80%),
-            radial-gradient(farthest-side at 0% 100%, #FFEBD0 0%, #EEF88E);`,
+            radial-gradient(farthest-side at 40% 50%, #19a5979d 0%, rgba(0, 0, 0, 0) 60%),
+            radial-gradient(farthest-side at 50% 50%, #4376ecbe 0%, transparent);`,
         },
         '.mesh-gradient': {
           'background-image': `
-            radial-gradient(farthest-side at 89% 9%, #19a5979d, rgba(0, 0, 0, 0) 70%), radial-gradient(farthest-side at 4% 45%, #4376ecbe, rgba(0, 0, 0, 0) 80%), radial-gradient(farthest-side at 35% 26%, #FFF3D9 0%, transparent);`,
+            radial-gradient(farthest-side at 89% 9%, #19a59759, rgba(0, 0, 0, 0) 70%), radial-gradient(farthest-side at 4% 45%, #4376ec57, rgba(0, 0, 0, 0) 80%), radial-gradient(farthest-side at 35% 26%, #FFF3D9 0%, transparent);`,
         },
-        '.vertical': {
-          'writing-mode': 'vertical-rl',
+        '.mesh-gradient-full': {
+          'background-image': `
+            radial-gradient(at 0% 0%, #4376ec57, rgba(0, 0, 0, 0) 50%),
+  radial-gradient(farthest-side at 80% 30%, #19a59759, rgba(0, 0, 0, 0) 50%),radial-gradient(farthest-side at 100% 100%, #FFF3D9 0%, transparent);`,
         },
       });
     }),

@@ -1,5 +1,6 @@
 ---
 import Field from '../components/Field.astro';
+import Link from '../components/Link.astro';
 import SectionComponent from '../components/SectionComponent.astro';
 ---
 
@@ -8,4 +9,26 @@ import SectionComponent from '../components/SectionComponent.astro';
   <Field id={'name'} text="Nombre" />
   <Field id={'email'} text="Correo" />
   <Field id={'messenge'} text="Mensaje" />
+
+  <div class="rounded-full p-3 flex flex-wrap gap-1 flex-col w-full">
+    <p class="md:text-2xl sm:text-xl text-center">Encuentrame en redes</p>
+
+    <li class="flex p-1 justify-center items-center">
+      <span class="font-bold mr-3">correo:</span>
+      <p>ga365743@gmail.com</p>
+    </li>
+
+    <ul class="flex gap-1 flex-wrap justify-center items-center">
+      <Link
+        link="https://www.linkedin.com/in/gloria-alicia-garcía"
+        text="Linkedin"
+        styles="text-mindaro bg-blues rounded-md px-2 p-1 w-fit"
+      />
+      <Link
+        link="https://github.com/GloriaAlicia"
+        text="Github"
+        styles=" text-mindaro bg-blues rounded-md  px-2 py-1 w-fit"
+      />
+    </ul>
+  </div>
 </SectionComponent>
