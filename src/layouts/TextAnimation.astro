@@ -1,7 +1,29 @@
-<div class="w-full flex items-center justify-center flex-col md:my-10">
+<div
+  class="sm:w-[100%] w-[150%] flex items-center justify-center flex-col md:my-10 relative"
+>
   <svg
-    class="mix-blend-screen"
-    data-filter-type="distortion"
+    class="mix-blend-overlay"
+    preserveAspectRatio="xMidYMid meet"
+    viewBox="0 0 1000 200"
+  >
+    <path
+      id="text-curve"
+      d="M 0 50 Q 100 0 200 100 Q 300 200 650 50 C 750 0 750 150 1000 50"
+      fill="none"></path>
+    <text>
+      <textPath
+        href="#text-curve"
+        font-size="40"
+        id="textPath"
+        startOffset="0"
+        class="fill-astronaut"
+      >
+        Gloria Alicia García García - Gloria Alicia García García
+      </textPath>
+    </text>
+  </svg>
+  <svg
+    class="sm:hidden block absolute -top-9 mix-blend-screen"
     preserveAspectRatio="xMidYMid meet"
     viewBox="0 0 1000 200"
   >
@@ -11,13 +33,12 @@
       fill="none"></path>
     <text>
       <textPath
-        href="#text-curve2"
         font-size="50"
-        id="textPath"
         startOffset="0"
         class="fill-astronaut"
+        href="#text-curve2"
       >
-        Gloria Alicia García García - Gloria Alicia García García
+        Gloria Alicia García - Frontend Developer
       </textPath>
     </text>
   </svg>

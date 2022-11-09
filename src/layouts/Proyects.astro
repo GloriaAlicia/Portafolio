@@ -1,20 +1,24 @@
 ---
 import Icon from '../components/Icon.astro';
+import Link from '../components/Link.astro';
 import Proyect from '../components/Proyect.astro';
 import SectionComponent from '../components/SectionComponent.astro';
 import Subtitle from '../components/Subtitle.astro';
 import Tag from '../components/Tag.astro';
 
 const textTasker =
-  'Proyecto independiente para conocer los principales hooks de react, tales como useState, useContext, useReducer, useEffect, así como conocer el guardado de datos en localStorage utilizando la libreria, con el desafio extra de crear listas con tareas independiente y mostrar su progreso.';
+  'Proyecto para conocer los principales hooks de react, tales como useState, useContext, useReducer, useEffect, así como conocer el guardado de datos en localStorage utilizando la libreria, con el desafio extra de crear listas con tareas independiente y mostrar su progreso.';
 
 const textHangman =
-  'Challenge del programa ONE, en el que a partir de las bases se desarrolla el juego, guardando palabras en localStorage, validando la entrada de las nuevas palabras, mostrando el desarrollo del muñeco según la cantidad de vidas, entre otros pequeños desafíos en el trayecto.';
+  'Challenge del programa ONE, en el que a partir de las bases de JavaScript se desarrolla el juego, guardando palabras en localStorage, validando la entrada de las nuevas palabras, mostrando el desarrollo del muñeco según la cantidad de vidas, entre otros pequeños desafíos en el trayecto.';
 ---
 
 <SectionComponent>
-  <div class="w-full lg:flex lg:w-11/12 flex-col">
-    <h2 class="font-title text-3xl sm:text-6xl select-none">Proyectos</h2>
+  <div class="w-full lg:flex lg:w-11/12 flex-col" id="Proyects">
+    <div class="flex items-center justify-between">
+      <h2 class="font-title text-3xl sm:text-6xl select-none">Proyectos</h2>
+      <Link link="./AllProyects" text="Ver todos" />
+    </div>
     <div class="flex lg:flex-row lg:justify-between flex-col gap-1">
       <div class="lg:w-full p-1 rounded-md">
         <Subtitle text="Frameworks y librerias utilizadas" />
@@ -33,7 +37,7 @@ const textHangman =
           />
           <Icon text="GIT" path="icons/git.svg" alt="git icon logo" />
           <Icon
-            text="styled"
+            text="Styled"
             path="icons/styled-components.svg"
             alt="styled components icon logo"
           />
@@ -42,6 +46,7 @@ const textHangman =
             path="icons/tailwindcss.svg"
             alt="tailwind icon logo"
           />
+          <Icon text="Astro" path="icons/astro.svg" alt="astro icon logo" />
           <Icon
             text="React"
             path="icons/react.svg"
@@ -56,10 +61,12 @@ const textHangman =
     <Proyect
       name="Tasker"
       path="img/tasker.png"
+      linkCode="https://github.com/GloriaAlicia/to-do-Lists"
+      linkDemo="https://tasker-app-gloria.netlify.app/"
       alt="imagen to-do list tasker"
       text={`${textTasker}`}
     >
-      <div class="flex gap-1 mt-1">
+      <div class="flex gap-1 mt-2">
         <Tag text="React" />
         <Tag text="Styled Components" />
       </div>
@@ -68,10 +75,12 @@ const textHangman =
     <Proyect
       name="El ahorcado"
       path="img/hangman.png"
+      linkCode="https://github.com/GloriaAlicia/hangmanGame"
+      linkDemo="https://gloriaalicia.github.io/hangmanGame/"
       alt="imagen ahorcado"
       text={`${textHangman}`}
     >
-      <div class="flex gap-1 mt-1">
+      <div class="flex gap-1 mt-2">
         <Tag text="HTML5" />
         <Tag text="CSS3" />
         <Tag text="JavaScript" />

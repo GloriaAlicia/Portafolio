@@ -32,6 +32,21 @@ const { title } = Astro.props;
   </head>
   <body class="bg-mindaro/40">
     <slot />
-    <script type="module" src="/scripts/movedText.js"></script>
+    <style is:global>
+      @tailwind base;
+      @tailwind components;
+      @tailwind utilities;
+
+      @layer base {
+        :root {
+          --blues: 67 118 236; /**#4376EC */
+          --lime-green: 25 165 152; /**#19A598 */
+          --mindaro: 255 243 217; /** #FFF3D9 */
+          --teal: 0 128 128;
+          --nara: 254 231 255; /** #FEE7E1 */
+          --astronaut: 38 48 103; /** #263167 */
+        }
+      }
+    </style>
   </body>
 </html>

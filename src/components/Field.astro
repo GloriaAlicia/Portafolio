@@ -1,8 +1,17 @@
 ---
-
-const {id, text} = Astro.props
+interface Props {
+  id: string;
+  text: string;
+  placeholder: string;
+}
+const { id, text, placeholder } = Astro.props;
 ---
+
 <div>
-<label for={id}> {text} </label>
-<input type="text">
+  <label for={id} class=""> {text}</label>
+  <input
+    type="text"
+    placeholder={placeholder}
+    class="bg-transparent border-2 p-1 rounded-md border-lime/40 focus:outline-lime focus:outline-2 w-full"
+  />
 </div>

@@ -2,33 +2,58 @@
 import Field from '../components/Field.astro';
 import Link from '../components/Link.astro';
 import SectionComponent from '../components/SectionComponent.astro';
+import Subtitle from '../components/Subtitle.astro';
 ---
 
 <SectionComponent>
-  <h2 class="font-title text-3xl sm:text-6xl select-none">Contáctame</h2>
-  <Field id={'name'} text="Nombre" />
-  <Field id={'email'} text="Correo" />
-  <Field id={'messenge'} text="Mensaje" />
+  <div
+    id="Form"
+    class="flex md:flex-row flex-col lg:w-11/12 w-full justify-around h-full items-center relative"
+  >
+    <div class="flex-grow h-full flex flex-col w-full sm:w-8/12">
+      <h2 class="font-title text-3xl sm:text-6xl select-none">Contáctame</h2>
+      <div class="w-full">
+        <Field id={'name'} text="Nombre" placeholder="Nombre" />
+        <Field id={'email'} text="Correo" placeholder="ejemplo@gmail.com" />
+        <Field
+          id={'messenge'}
+          text="Mensaje"
+          placeholder="Escribe aquí tu mensaje"
+        />
+      </div>
+      <button
+        class="mt-7 text-mindaro bg-lime rounded-md px-3 py-2 w-fit text-xl"
+        >Enviar</button
+      >
+    </div>
 
-  <div class="rounded-full p-3 flex flex-wrap gap-1 flex-col w-full">
-    <p class="md:text-2xl sm:text-xl text-center">Encuentrame en redes</p>
-
-    <li class="flex p-1 justify-center items-center">
-      <span class="font-bold mr-3">correo:</span>
-      <p>ga365743@gmail.com</p>
-    </li>
-
-    <ul class="flex gap-1 flex-wrap justify-center items-center">
-      <Link
-        link="https://www.linkedin.com/in/gloria-alicia-garcía"
-        text="Linkedin"
-        styles="text-mindaro bg-blues rounded-md px-2 p-1 w-fit"
+    <div
+      class="rounded-md p-3 flex flex-wrap gap-1 flex-col md:ml-14 md:w-auto sm:w-8/12 m-0 w-full sm:items-start sm:pl-0"
+    >
+      <img
+        src="img/email.png"
+        alt="image email "
+        class="sm:block hidden sm:absolute sm:-bottom-20 sm:-right-16 md:static lg:w-11/12"
       />
-      <Link
-        link="https://github.com/GloriaAlicia"
-        text="Github"
-        styles=" text-mindaro bg-blues rounded-md  px-2 py-1 w-fit"
-      />
-    </ul>
+
+      <Subtitle text="Encuentrame en redes" />
+
+      <div class="flex gap-1 flex-wrap flex-col sm:bg-transparent">
+        <p><span class="font-bold mr-2">correo:</span>ga365743@gmail.com</p>
+
+        <ul class="flex flex-wrap gap-1">
+          <Link
+            link="https://www.linkedin.com/in/gloria-alicia-garcía"
+            text="Linkedin"
+            styles="text-mindaro bg-blues rounded-md px-2 p-1 w-fit"
+          />
+          <Link
+            link="https://github.com/GloriaAlicia"
+            text="Github"
+            styles=" text-mindaro bg-blues rounded-md  px-2 py-1 w-fit"
+          />
+        </ul>
+      </div>
+    </div>
   </div>
 </SectionComponent>
