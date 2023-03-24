@@ -45,7 +45,7 @@ module.exports = {
         },
         '.mesh-gradient-full': {
           'background-image': `
-            radial-gradient(at 0% 0%, #4376ec57, rgba(0, 0, 0, 0) 50%),radial-gradient(farthest-side at 80% 30%, #19a59759, rgba(0, 0, 0, 0) 50%),radial-gradient(farthest-side at 100% 100%, #FFF3D9 0%, transparent);`,
+            radial-gradient(at 0% 0%, #92c4d4, rgba(0, 0, 0, 0) 50%),radial-gradient(farthest-side at 80% 30%, #19a59759, rgba(0, 0, 0, 0) 50%),radial-gradient(farthest-side at 100% 100%, #FFF3D9 0%, transparent);`,
         },
         '.mesh-gradient-mobile': {
           'background-image': `

@@ -7,9 +7,9 @@ const menu =
 const item = 'md:text-xl sm:text-lg text-base ';
 ---
 
-<nav class="w-full md:h-auto sm:h-1/5 md:mr-5 md:my-3 sm:block hidden">
+<nav class="w-full md:h-auto sm:h-1/5 md:mr-5 md:my-3 sm:block">
   <ul
-    class="flex md:gap-1 md:mx-2 max-md:h-full w-full items-center justify-around px-1"
+    class="flex md:gap-1 md:mx-2 max-md:h-full w-full items-center justify-around"
   >
     <li
       class={`${menuDesktop} ${menu} ${item} flex  md:flex-grow bg-lime/30 justify-center`}
@@ -34,7 +34,7 @@ const item = 'md:text-xl sm:text-lg text-base ';
         >Sobre mí</a
       >
     </li>
-    <li class={`${menuDesktop} ${menu} flex px-3 bg-lime/10`}>
+    <li class={`${menuDesktop} ${menu} px-3 bg-lime/10 sm:flex hidden`}>
       <a
         class={`${item} flex cursor-pointer w-full h-full  items-center justify-center text-center py-2`}
         href="#form">Contáctame</a

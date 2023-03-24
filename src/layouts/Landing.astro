@@ -1,7 +1,7 @@
 ---
 import Menu from '../components/Menu.astro';
 
-const fontSize = 'sm:text-7xl text-5xl';
+const fontSize = 'md:text-[5rem] sm:text-7xl text-5xl';
 ---
 
 <section
@@ -10,27 +10,35 @@ const fontSize = 'sm:text-7xl text-5xl';
   <Menu />
   <article class="flex w-full gap-3 h-4/5">
     <article
-      class="h-full md:border-4 md:border-white/[.5] md:p-4 md:rounded-md w-full flex justify-center items-center max-sm:h-full sm:flex-row flex-col"
+      class="h-full md:p-4 md:rounded-md w-full flex justify-center items-center max-sm:h-full sm:flex-row flex-col"
     >
+      <div class="lg:block hidden">
+        <img
+          src="img/hero-tray.png"
+          alt="laptop code shape 3d render "
+          class="rounded-md w-full h-auto lg:w-96"
+        />
+      </div>
+
       <div
-        class="w-11/12 max-w-lg relative flex flex-col justify-center items-center"
+        class="max-w-lg relative flex flex-col justify-center items-center lg:pl-9"
       >
         <article class="flex flex-col justify-center items-center h-full">
           <span
-            class={`font-title ${fontSize} bg-clip-text text-transparent text-gradient w-full mb-2`}
+            class={`font-title ${fontSize} bg-clip-text text-transparent text-gradient  w-full mb-6`}
           >
-            Gloria Alicia</span
-          >
+            Gloria Alicia
+          </span>
 
           <div>
             <h2 class="font-text text-xl mb-2">Frontend Developer</h2>
-            <p class="text-astronaut/[.9] font-text text-base">
+            <p class="text-astronaut/[.9] font-text text-lg">
               Adoro ser perfeccionista, enfocandome en el diseño intuitivo y
               performance eficaz para el usuario.
             </p>
           </div>
 
-          <div
+          <button
             class="mt-5 self-start flex justify-between rounded-full p-1 items-center border-4 border-white/40 overflow-hidden font-text w-fit"
           >
             <h2 class="md:text-xl text-lg mx-2">Descargar CV</h2>
@@ -41,16 +49,8 @@ const fontSize = 'sm:text-7xl text-5xl';
                 width="55"
               />
             </a>
-          </div>
+          </button>
         </article>
-      </div>
-
-      <div class="lg:block hidden">
-        <img
-          src="img/laptop-prism.png"
-          alt="laptop code shape 3d render "
-          class="rounded-md w-full h-auto"
-        />
       </div>
     </article>
   </article>
